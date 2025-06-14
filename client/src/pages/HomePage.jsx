@@ -11,9 +11,9 @@ const HomePage = () => {
       <div className={`backdrop-blur-xl border-2 border-gray-600 rounded-2xl overflow-hidden h-full grid grid-cols-1 relative ${
         selectedUser ? 'md:grid-cols-[1fr_1.5fr_1fr] xl:grid-cols-[1fr_2fr_1fr]' : 'md:grid-cols-2'
       }`}>
-        <Sidebar />
-        <ChatContainer />
-        <RightSidebar />
+        <Sidebar selecteduser={selectedUser} setSelecteduser={setSelectedUser} />
+        <ChatContainer selecteduser={selectedUser} setSelecteduser={setSelectedUser} />
+        <RightSidebar selecteduser={selectedUser} setSelecteduser={setSelectedUser} />
       </div>
     </div>
   )
